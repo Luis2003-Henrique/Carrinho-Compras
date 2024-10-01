@@ -26,7 +26,7 @@ function adicionar(){
         atualizarValorTotal()
         let novoItem1 = document.createElement('li');
         carrinho.innerHTML = '';
-        novoItem1.textContent = (`${quantidade}x Fone de ouvido R$${foneDeOuvido}`);
+        novoItem1.textContent = (`${quantidade}x Fone de ouvido R$${valorTotalDoProduto}`);
         carrinho.appendChild(novoItem1);
     
     } else if (produtoSelecionado == ('Celular - R$1400')){
@@ -34,7 +34,7 @@ function adicionar(){
         listaDeSomas.push(valorTotalDoProduto);
         atualizarValorTotal()
         let novoItem2 = document.createElement('li');
-        novoItem2.textContent = (`${quantidade}x Celular R$${celular}`);
+        novoItem2.textContent = (`${quantidade}x Celular R$${valorTotalDoProduto}`);
         carrinho.appendChild(novoItem2);
         
     } else if (produtoSelecionado == ('Oculus VR - R$5000')){
@@ -42,7 +42,7 @@ function adicionar(){
         listaDeSomas.push(valorTotalDoProduto);
         atualizarValorTotal()
         let novoItem3 = document.createElement('li');
-        novoItem3.textContent = (`${quantidade}x Óculos VR R$${oculosVr}`);
+        novoItem3.textContent = (`${quantidade}x Óculos VR R$${valorTotalDoProduto}`);
         carrinho.appendChild(novoItem3);
 
 }
