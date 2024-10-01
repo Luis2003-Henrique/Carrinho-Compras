@@ -1,7 +1,3 @@
-let foneDeOuvido = 100;
-let celular = 1400;
-let oculosVr = 5000;
-
 let valorSomado = 0;
 
 let listaDeSomas = [];
@@ -13,40 +9,25 @@ adicionar();
 
 function adicionar(){
 
-    let produtos = document.getElementById('produto');
-    let produtoSelecionado = produtos.value;
+    let produtos = document.getElementById('produto').value;
+    let produtoSelecionado = produtos.split('-')[0];
+  
+    let valorDeCadaProduto = produtos.split('R$')[1];
     
     let quantidade = parseInt(document.getElementById('quantidade').value);
+
+    let valorTotalDoProduto = valorDeCadaProduto * quantidade;
     
     let carrinho = document.getElementById('lista-produtos');
+    carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produtos__produto">
+    <span class="texto-azul">${quantidade}x</span> ${produtoSelecionado} <span class="texto-azul">R$${valorTotalDoProduto}</span>
+  </section>`;
 
-    if (produtoSelecionado == 'Fone de ouvido - R$100'){
-        let valorTotalDoProduto = foneDeOuvido * quantidade;
-        listaDeSomas.push(valorTotalDoProduto);
-        atualizarValorTotal()
-        let novoItem1 = document.createElement('li');
-        carrinho.innerHTML = '';
-        novoItem1.textContent = (`${quantidade}x Fone de ouvido R$${valorTotalDoProduto}`);
-        carrinho.appendChild(novoItem1);
-    
-    } else if (produtoSelecionado == ('Celular - R$1400')){
-        valorTotalDoProduto = celular * quantidade;
-        listaDeSomas.push(valorTotalDoProduto);
-        atualizarValorTotal()
-        let novoItem2 = document.createElement('li');
-        novoItem2.textContent = (`${quantidade}x Celular R$${valorTotalDoProduto}`);
-        carrinho.appendChild(novoItem2);
-        
-    } else if (produtoSelecionado == ('Oculus VR - R$5000')){
-        valorTotalDoProduto = oculosVr * quantidade;
-        listaDeSomas.push(valorTotalDoProduto);
-        atualizarValorTotal()
-        let novoItem3 = document.createElement('li');
-        novoItem3.textContent = (`${quantidade}x Óculos VR R$${valorTotalDoProduto}`);
-        carrinho.appendChild(novoItem3);
 
+  listaDeSomas.push(valorTotalDoProduto);
+    atualizarValorTotal()
 }
-}
+
 
 limpar();
 
