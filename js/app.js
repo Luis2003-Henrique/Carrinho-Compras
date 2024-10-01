@@ -23,6 +23,7 @@ function adicionar(){
     <span class="texto-azul">${quantidade}x</span> ${produtoSelecionado} <span class="texto-azul">R$${valorTotalDoProduto}</span>
   </section>`;
 
+  document.getElementById('quantidade').value = '0';
 
   listaDeSomas.push(valorTotalDoProduto);
     atualizarValorTotal()
