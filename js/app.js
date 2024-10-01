@@ -68,7 +68,7 @@ function atualizarValorTotal(){
     total.textContent = (`R$${valorSomado}`);
 }
 
-a
+
 // Adicionar um botão para remover itens do carrinho: Isso permitiria que o usuário removesse itens que ele não deseja mais comprar.
 // Criar um sistema de desconto: Você poderia implementar um sistema de desconto para incentivar o usuário a comprar mais produtos.
 // Implementar um sistema de frete: Você poderia calcular o frete com base no valor total da compra ou na região de entrega.
