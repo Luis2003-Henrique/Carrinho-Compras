@@ -63,16 +63,3 @@ function atualizarValorTotal(){
 // Criar um sistema de login: Você poderia permitir que o usuário faça login para salvar seus dados de compra e histórico de pedidos.
 
 
-// function adicionar() {
-//     //recuperar valores nome do produto, quantidade e valor
-//     let produto = document.getElementById('produto').value;
-//     let nomeProduto = produto.split('-')[0];
-//     let valorUnitario = produto.split('R$')[1]; 
-//     let quantidade = document.getElementById('quantidade'); 
-//     alert(nomeProduto);
-//     alert(valorUnitario);
-//     alert(quantidade.value);
-//     let preco = quantidade.value * valorUnitario;
-//     alert(preco);
-
-//forma utilizada no curso, por meio do split. Mais prático e compacto
