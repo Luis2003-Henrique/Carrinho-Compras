@@ -27,18 +27,24 @@ function adicionar(){
 
   listaDeSomas.push(valorTotalDoProduto);
     atualizarValorTotal()
+
+    if (quantidade <= 0){
+        alert('Coloque uma quantidade válida');
+        document.getElementById('lista-produtos').innerHTML = '';
+        document.getElementById('valor-total').textContent = 'R$0';
+        document.getElementById('quantidade').value = '0';
+        listaDeSomas = [];
+        return;
+    } 
 }
 
 
 limpar();
 
 function limpar(){
-    let limparProdutos = document.getElementById('lista-produtos');
-    let limparValor = document.getElementById('valor-total');
-    let limparQuantidade = document.getElementById('quantidade');
-limparProdutos.textContent = '';
-limparValor.textContent = 'R$0';
-limparQuantidade.value = '';
+document.getElementById('lista-produtos').innerHTML = '';
+document.getElementById('valor-total').textContent = 'R$0'
+document.getElementById('quantidade').value = '0';
 listaDeSomas = [];
 }
 
