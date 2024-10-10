@@ -1,4 +1,0 @@
-Adicionar um botão para remover itens do carrinho: Isso permitiria que o usuário removesse itens que ele não deseja mais comprar.
-Criar um sistema de desconto: Você poderia implementar um sistema de desconto para incentivar o usuário a comprar mais produtos.
-Implementar um sistema de frete: Você poderia calcular o frete com base no valor total da compra ou na região de entrega.
-Criar um sistema de login: Você poderia permitir que o usuário faça login para salvar seus dados de compra e histórico de pedidos.
